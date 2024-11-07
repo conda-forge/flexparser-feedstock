@@ -1,5 +1,5 @@
 {% set name = "flexparser" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flexparser-{{ version }}.tar.gz
-  sha256: 36f795d82e50f5c9ae2fde1c33f21f88922fdd67b7629550a3cc4d0b40a66856
+  sha256: 266d98905595be2ccc5da964fe0a2c3526fbbffdc45b65b3146d75db992ef6b2
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - setuptools-scm >=3.4.3
     - pip
   run:
+    - typing_extensions
     - python >=3.9
     - typing-extensions
 
